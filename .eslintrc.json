@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "es6": true,
+    "jasmine": true
+  },
+  "rules": {
+    "no-plusplus": 0,
+    "no-console": 0
+  },
+  "globals": {
+    "jest": true
+  }
+}

@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`log error 1`] = `
+Array [
+  Array [
+    Array [
+      Array [
+        Object {
+          "text": "ERROR: Test error",
+        },
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`log error 2`] = `
+Array [
+  Array [
+    Array [
+      Object {
+        "text": "ERROR: Test error",
+      },
+    ],
+  ],
+]
+`;
+
+exports[`log error 3`] = `
+Array [
+  Array [
+    Object {
+      "text": "ERROR: Test error",
+    },
+  ],
+]
+`;
+
+exports[`log info 1`] = `
+Array [
+  Array [
+    Array [
+      "Test info",
+    ],
+  ],
+]
+`;
+
+exports[`log info 2`] = `
+Array [
+  Array [
+    "Test info",
+  ],
+]
+`;
+
+exports[`log msg 1`] = `
+Array [
+  Array [
+    Array [
+      "Test msg",
+    ],
+  ],
+]
+`;
+
+exports[`log msg 2`] = `
+Array [
+  Array [
+    "Test msg",
+  ],
+]
+`;
+
+exports[`log success 1`] = `
+Array [
+  Array [
+    Array [
+      Array [
+        Object {
+          "text": "Test success",
+        },
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`log success 2`] = `
+Array [
+  Array [
+    Array [
+      Object {
+        "text": "Test success",
+      },
+    ],
+  ],
+]
+`;
+
+exports[`log success 3`] = `
+Array [
+  Array [
+    Object {
+      "text": "Test success",
+    },
+  ],
+]
+`;
+
+exports[`log warn 1`] = `
+Array [
+  Array [
+    Array [
+      Array [
+        Object {
+          "text": "Test warn",
+        },
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`log warn 2`] = `
+Array [
+  Array [
+    Array [
+      Object {
+        "text": "Test warn",
+      },
+    ],
+  ],
+]
+`;
+
+exports[`log warn 3`] = `
+Array [
+  Array [
+    Object {
+      "text": "Test warn",
+    },
+  ],
+]
+`;
