@@ -4,8 +4,10 @@
   "description": "Simple log wrapper for console which uses chalk for colors and cowsay for better loggin",
   "main": "src/log.js",
   "scripts": {
+    "prepublishOnly": "npm test",
     "test": "jest",
-    "test-coverage": "jest && codecov"
+    "test-coverage": "jest --coverage",
+    "test-coverage-report": "codecov"
   },
   "keywords": [
     "console",
@@ -27,7 +29,15 @@
   },
   "jest": {
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "repository": {
     "type": "git",
