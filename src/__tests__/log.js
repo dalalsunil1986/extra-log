@@ -44,6 +44,17 @@ describe('log', () => {
   });
 
 
+  it('info with object', () => {
+    const obj = { key: 1, value: 'value' };
+    log.info('Test info', obj);
+
+    expect(logMocked).toHaveBeenCalledTimes(1);
+    expect(logMocked.mock.calls).toMatchSnapshot();
+    expect(chalk.grey).toHaveBeenCalledTimes(1);
+    expect(chalk.grey.mock.calls).toMatchSnapshot();
+  });
+
+
   it('info is off when log level < 3', () => {
     log.setLevel(2);
     log.info('Test info');

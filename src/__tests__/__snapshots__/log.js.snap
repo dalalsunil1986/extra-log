@@ -54,6 +54,28 @@ Array [
 ]
 `;
 
+exports[`log info with object 1`] = `
+Array [
+  Array [
+    Array [
+      "Test info",
+    ],
+    Object {
+      "key": 1,
+      "value": "value",
+    },
+  ],
+]
+`;
+
+exports[`log info with object 2`] = `
+Array [
+  Array [
+    "Test info",
+  ],
+]
+`;
+
 exports[`log msg 1`] = `
 Array [
   Array [
