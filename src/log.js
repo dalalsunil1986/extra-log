@@ -5,6 +5,12 @@ const { log } = global.console;
 
 const cowSay = (msg, color = 'green') =>
   log(chalk[color](cowsay.say({ text: msg })));
+const colorArgs = (color, params) => params.map((param) => {
+  if ('object' === typeof param) {
+    return param;
+  }
+  return chalk[color](param);
+});
 
 const maxLevel = 3;
 let activeLavel = maxLevel;
@@ -24,7 +30,7 @@ module.exports = {
     activeLavel = parseInt(level, 10);
     if (Number.isNaN(activeLavel) || activeLavel > maxLevel) {
       activeLavel = maxLevel;
-    } if (activeLavel < 0) {
+    } if (0 > activeLavel) {
       activeLavel = 0;
     }
   },
@@ -37,14 +43,14 @@ module.exports = {
 
   info: (...args) => {
     if (levels.info <= activeLavel) {
-      log(chalk.grey(...args));
+      log(...colorArgs('grey', args));
     }
   },
 
 
   msg: (...args) => {
     if (levels.msg <= activeLavel) {
-      log(chalk.green(...args));
+      log(...colorArgs('green', args));
     }
   },
 
