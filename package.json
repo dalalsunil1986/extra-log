@@ -1,6 +1,6 @@
 {
   "name": "extra-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple log wrapper for console which uses chalk for colors and cowsay for better loggin",
   "main": "src/log.js",
   "scripts": {
