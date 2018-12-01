@@ -13,7 +13,7 @@ const colorArgs = (color, params) => params.map((param) => {
 });
 
 const maxLevel = 3;
-let activeLavel = maxLevel;
+let activeLevel = maxLevel;
 const levels = {
   info: 3,
 
@@ -27,50 +27,50 @@ const levels = {
 module.exports = {
 
   setLevel(level) {
-    activeLavel = parseInt(level, 10);
-    if (Number.isNaN(activeLavel) || activeLavel > maxLevel) {
-      activeLavel = maxLevel;
-    } if (0 > activeLavel) {
-      activeLavel = 0;
+    activeLevel = parseInt(level, 10);
+    if (Number.isNaN(activeLevel) || activeLevel > maxLevel) {
+      activeLevel = maxLevel;
+    } if (0 > activeLevel) {
+      activeLevel = 0;
     }
   },
 
 
   getLevel() {
-    return activeLavel;
+    return activeLevel;
   },
 
 
   info: (...args) => {
-    if (levels.info <= activeLavel) {
+    if (levels.info <= activeLevel) {
       log(...colorArgs('grey', args));
     }
   },
 
 
   msg: (...args) => {
-    if (levels.msg <= activeLavel) {
+    if (levels.msg <= activeLevel) {
       log(...colorArgs('green', args));
     }
   },
 
 
   success: (msg) => {
-    if (levels.success <= activeLavel) {
+    if (levels.success <= activeLevel) {
       cowSay(msg);
     }
   },
 
 
   warn: (msg) => {
-    if (levels.warn <= activeLavel) {
+    if (levels.warn <= activeLevel) {
       cowSay(msg, 'yellow');
     }
   },
 
 
   error: (msg) => {
-    if (levels.error <= activeLavel) {
+    if (levels.error <= activeLevel) {
       cowSay(`ERROR: ${msg}`, 'red');
     }
   },
